@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitZone Gym — Спортзал в Астане</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-image: url("photo7.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f5f5f5;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(255, 75, 43, 0.274);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 3px solid #ffb199;
+      box-shadow: 0 0 20px rgba(255, 65, 108, 0.6);
+    }
+
+    header h1 { font-size: 3.2em; margin-bottom: 10px; text-shadow: 0 0 10px rgba(0,0,0,0.4); }
+    header p { font-size: 1.3em; color: #fff8e7; }
+
+    nav {
+      background: rgba(28, 28, 28, 0.95);
+      text-align: center;
+      padding: 12px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffb199;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover { color: #fff; transform: scale(1.1); }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 25px;
+      background: rgba(28, 28, 28, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 65, 108, 0.4);
+    }
+
+    section { margin-bottom: 50px; }
+
+    h2 {
+      color: #ffb199;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 0 0 5px rgba(255, 65, 108, 0.6);
+    }
+
+    p { text-align: center; font-size: 1.1em; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid #ff4b2b;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
+    }
+
+    .video {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 65, 108, 0.5);
+    }
+
+    .map { margin-top: 25px; text-align: center; }
+    .map iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      background: rgba(10, 10, 10, 0.9);
+      color: #ccc;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+      border-top: 2px solid #ff4b2b;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>🏋️‍♂️ FitZone Gym</h1>
+    <p>Твоя сила начинается здесь — Спортзал в Астане</p>
+    <img src="photo6.jpg" alt="Наш зал" style="width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-top:20px;">
+  </header>
+
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#video">Видео</a>
+    <a href="#location">Локация</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>О нас</h2>
+      <p><strong>FitZone Gym</strong> — современный спортзал в сердце Астаны. Тренируйся с лучшими тренерами и достигай своих целей! Наш девиз: <em>“Сила. Здоровье. Результат.”</em></p>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Зал 1">
+        <img src="photo2.jpg" alt="Зал 2">
+        <img src="photo3.jpg" alt="Зал 3">
+        <img src="photo4.jpg" alt="Тренажёры 1">
+        <img src="photo5.jpg" alt="Тренажёры 2">
+        <img src="photo6.jpg" alt="Зал 4">
+        <img src="photo7.jpg" alt="Зал 5">
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>Наш зал в действии</h2>
+      <div class="video">
+        <video controls poster="photo1.jpg">
+          <source src="video.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+    </section>
+
+    <section id="location">
+      <h2>Наш зал на карте</h2>
+      <p>Мы находимся в Астане, Казахстан</p>
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.4459937209897!2d71.42987217656408!3d51.128485271722796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245856e1f4ef7c5%3A0x331e6481b6e1aab!2z0JDQstGC0L7Qv9C-0YDRgtC40L3QsNC30LjQutC-LCDQmtC40LXQstGB0YLQvtC6LCDQmtC40LXQstGB0YLQvtC6LCDQmtC40LXQstGB0YLQvtC6INCa0LjQtdCy0YHRgtC-0Log0LrQvtC80L_Rj9C90YvQuSDQtNC40L3RgtC10LrRgiDQvNC-0LvQtdC60YHQuNC70YzQvdCw!5e0!3m2!1sru!2skz!4v1709988072317!5m2!1sru!2skz"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 FitZone Gym — Астана | Здоровье, сила, мотивация 💪
+  </footer>
+</body>
+</html>
